@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">SWC_timetable</string>
+
+    <string-array name="stream">
+        <item> ---Please Select Stream---</item>
+        <item>BTech</item>
+        <item>BDes</item>
+    </string-array>
+
+    <string-array name="year">
+        <item> ---Please Select Year---</item>
+        <item>Year_1</item>
+        <item>Year_2</item>
+        <item>Year_3</item>
+        <item>Year_4</item>
+    </string-array>
+
+
+    <string-array name="Branch">
+        <item> ---Please Select Branch---</item>
+        <item>CSE</item>
+        <item>MnC</item>
+        <item>ECE</item>
+        <item>EEE</item>
+        <item>Mechanical</item>
+        <item>Chemical</item>
+        <item>Civil</item>
+        <item>Biotech</item>
+        <item>EP</item>
+        <item>CST</item>
+
+    </string-array>
+
+    <string-array name="Day">
+        <item> ---Please Select Day---</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thrusday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+
+
+    </string-array>
+</resources>
