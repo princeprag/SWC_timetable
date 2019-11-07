@@ -17,7 +17,7 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
     FirebaseFirestore db =FirebaseFirestore.getInstance();
   Spinner s,b,y;
-  Button btn;
+  Button btn,dis;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,13 +26,14 @@ public class MainActivity extends AppCompatActivity {
         b=(Spinner) findViewById(R.id.branch);
         y=(Spinner) findViewById(R.id.year);
         btn=(Button)findViewById(R.id.btn_submit);
+        dis=(Button)findViewById(R.id.display);
 
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(MainActivity.this,Timetable.class);
+                Intent i = new Intent(MainActivity.this,ShowTimetable.class);
                 i.putExtra("Stream",s.getSelectedItem().toString());
                 i.putExtra("Branch",b.getSelectedItem().toString());
                 i.putExtra("Year",y.getSelectedItem().toString());
@@ -42,42 +43,50 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+//        dis.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i2= new Intent(MainActivity.this,ShowTimetable.class);
+//                startActivity(i2);
+//            }
+//        });
+
         Map<String,Object> data = new HashMap<>();
 
 
 
 
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_2").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_3").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_4").set(data);
-
-
-
-
-        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_2").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_3").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_4").set(data);
-
-
-
-        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_2").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_3").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_4").set(data);
-
-
-
-        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_2").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_3").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_4").set(data);
-
-
-
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_1").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
-        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_1").set(data);
-
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_2").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_3").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_4").set(data);
+//
+//
+//
+//
+//        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_2").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_3").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_4").set(data);
+//
+//
+//
+//        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_2").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_3").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("EEE").collection("Year").document("Year_4").set(data);
+//
+//
+//
+//        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_2").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_3").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("MnC").collection("Year").document("Year_4").set(data);
+//
+//
+//
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_1").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("CSE").collection("Year").document("Year_1").set(data);
+//        db.collection("Timetable").document("Btech").collection("Branch").document("ECE").collection("Year").document("Year_1").set(data);
+//
 
 
 

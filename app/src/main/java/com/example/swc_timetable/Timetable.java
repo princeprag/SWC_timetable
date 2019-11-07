@@ -41,6 +41,9 @@ public class Timetable extends AppCompatActivity {
         y=i.getStringExtra("Year");
         slot1t=findViewById(R.id.slot1t);
         slot1v=findViewById(R.id.slot1v);
+
+
+
         slot2t=findViewById(R.id.slot2t);
         slot2v=findViewById(R.id.slot2v);
         slot3t=findViewById(R.id.slot3t);
